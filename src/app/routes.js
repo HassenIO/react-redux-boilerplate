@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Route, Switch } from 'react-router-dom';
+import { Header } from '../components';
 import View from '../views';
 
 /**
@@ -8,9 +9,14 @@ import View from '../views';
  */
 export default () => {
   return (
-    <Switch>
-      <Route exact path="/" component={View.home} />
-      <Route path="*" component={View.notFound} />
-    </Switch>
+    <Fragment>
+      <Header />
+      <Switch>
+        <Route exact path="/" component={View.Home} />
+        <Route exact path="/project/:id" component={View.Project} />
+        <Route exact path="/project/:project_id/resource/:id" component={View.Resource} />
+        <Route path="*" component={View.NotFound} />
+      </Switch>
+    </Fragment>
   );
 };

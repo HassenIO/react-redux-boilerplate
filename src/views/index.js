@@ -1,7 +1,11 @@
-import home from './home';
-import notFound from './notFound';
+import Home from './home';
+import Project from './project';
+import Resource from './resource';
+import NotFound from './notFound';
 
 export default {
-  home,
-  notFound
+  Home,
+  Project,
+  Resource,
+  NotFound
 };

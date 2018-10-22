@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Actions from './actions';
-import './home.css';
+import './style.css';
 
 function mapStateToProps(state) {
   return {
